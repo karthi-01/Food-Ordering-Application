@@ -9,13 +9,15 @@ import PaymentSuccess from "../pages/PaymentSuccess";
 import { useSelector } from "react-redux";
 import { cartProducts } from "../stores/cart/cartSlice";
 import { Footer } from "../components/Footer";
+import { useEffect, useState } from "react";
 
 const Navigation = () => {
     const productsInCart = useSelector(cartProducts);
+    const [active, setActive] = useState('/');
 
     return (
         <BrowserRouter>
-            <Header cartCount={productsInCart ? productsInCart.length : 0}/>
+            <Header cartCount={productsInCart ? productsInCart.length : 0} active = {active} setActive = {setActive}/>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />

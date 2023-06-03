@@ -3,7 +3,7 @@ import aboutImage from "../assets/images/about-image.png";
 export const About = () => {
 
     return (
-        <div className="bg-white">
+        <div id = "about" className="bg-white">
             <div className="p-24 grid grid-cols-2">
                 <div className="">
                     <h2 className="text-2xl font-medium">About Us</h2>

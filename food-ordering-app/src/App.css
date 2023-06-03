@@ -16,3 +16,11 @@ body {
   height: 100vh;
   background-color: black;
 }
+
+.active {
+  color: #ffbe0b;
+}
+
+.white {
+  color: white;
+}
