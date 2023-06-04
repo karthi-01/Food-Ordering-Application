@@ -24,3 +24,38 @@ body {
 .white {
   color: white;
 }
+
+.read-or-hide {
+  color: rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+.card-title {
+  margin-bottom: 0.4rem;
+  height: 60px;
+}
+
+.text {
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.text::-webkit-scrollbar {
+  display: none;
+  /* scrollbar-width: 3px; */
+}
+.card-desc {
+  height: 100px;
+  text-overflow: scroll;
+}
+.card-img {
+  margin: 1rem 0;
+}
+
+.card-container {
+  height: 350px;
+}
+
+.product-info {
+  width: 400px;
+}
