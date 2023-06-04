@@ -24,8 +24,8 @@ const Cart = () => {
 
     if (!cart || cart.length === 0) {
         return (
-            <div className="bg-white h-full text-black flex justify-center p-4">
-                <h1>Your Cart is empty</h1>
+            <div className="bg-white p-4 text-black flex justify-center items-center content-center">
+                <img src={require("../../assets/images/cart2.png")} alt="cart" style={{height: "500px"}} />
             </div>
         )
     }

@@ -6,24 +6,11 @@ export const Footer = () => {
                     <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
                     <ul class="text-gray-300">
                         <li class="mb-4">
-                            <a href="#" className=" hover:underline">About</a>
+                            <a href="#about" className=" hover:underline">About</a>
+                            
                         </li>
                         <li class="mb-4">
-                            <a href="#" className="hover:underline">Menu</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Legal</h2>
-                    <ul class="text-gray-300">
-                        <li class="mb-4">
-                            <a href="#" className="hover:underline">Privacy Policy</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" className="hover:underline">Licensing</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="Terms.html" className="hover:underline" target = "_blank">Terms &amp; Conditions</a>
+                            <a href="/menu" className="hover:underline">Menu</a>
                         </li>
                     </ul>
                 </div>
