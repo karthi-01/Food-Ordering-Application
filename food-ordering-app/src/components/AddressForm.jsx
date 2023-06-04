@@ -49,6 +49,8 @@ export const AddressForm = ({ onTabSwitch }) => {
           <option value="Punjab">Punjab</option>
           <option value="Tamil Nadu">Tamil Nadu</option>
           <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="New Delhi">New Delhi</option>
         </select>
       </div>
       <div className="mb-4 md:mr-2 md:mb-0 flex-1">
@@ -89,6 +91,18 @@ export const AddressForm = ({ onTabSwitch }) => {
               <option value="Varanasi">Varanasi</option>
               <option value="Agra">Agra</option>
               <option value="Kanpur">Kanpur</option>
+            </>
+          )}
+          {selectedState === 'Karnataka' && (
+            <>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Mysore">Mysore</option>
+              <option value="Mangalore">Mangalore</option>
+            </>
+          )}
+          {selectedState === 'New Delhi' && (
+            <>
+              <option value="Delhi City">Delhi City</option>
             </>
           )}
         </select>

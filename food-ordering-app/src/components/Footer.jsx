@@ -6,12 +6,15 @@ export const Footer = () => {
                     <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
                     <ul class="text-gray-300">
                         <li class="mb-4">
-                            <a href="#about" className=" hover:underline">About</a>
+                            <a href="#about" className=" hover:underline mb-6 font-bold">About</a>
                             
                         </li>
                         <li class="mb-4">
-                            <a href="/menu" className="hover:underline">Menu</a>
+                            <a href="/menu" className="hover:underline mb-6 font-bold">Menu</a>
                         </li>
+                        <br />
+                        Contact us at:<h1 className="font-semibold text-lg text-yellow-600 py-2"> feedback@delicious.com
+                            </h1>
                     </ul>
                 </div>
             </div>
