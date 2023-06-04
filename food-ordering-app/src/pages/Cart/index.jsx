@@ -7,11 +7,20 @@ import { ReactComponent as ArrowRightSvg } from "../../assets/icons/arrow-right-
 import { AddressForm } from "../../components/AddressForm";
 import { ProductsSummary } from "../../components/ProductsSummary";
 import { StripeWrapper } from "../../components/PaymentForm";
+import { useEffect, useState } from "react";
 
 const Cart = () => {
     const cart = useSelector(cartProducts);
     const tabs= ['Summary', 'Delivery', 'Payment'];
     const [currentTab, handleTabSwitch] = useTabSwitch(tabs, 'Summary');
+    const [total,setTotal]= useState(0);
+    useEffect(()=>{
+        let temptotal = 0;
+        cart.map((item)=>{temptotal+=item.price})
+        setTotal(temptotal)
+
+    });
+
 
     if (!cart || cart.length === 0) {
         return (
@@ -22,10 +31,15 @@ const Cart = () => {
     }
 
     return (
-        <div className="bg-white h-screen text-black mx-auto mt-2 border border-gray-200 p-4 md:w-2/3 rounded-lg shadow-md sm:p-6 lg:p-8">
+        <div className="bg-white text-black mx-auto mt-2 border border-gray-200 p-4 md:w-2/3 rounded-lg shadow-md sm:p-6 lg:p-8">
             <Tabs list={tabs} onTabSwitch={handleTabSwitch} activeTab={currentTab} />
             <div className={`tabs ${currentTab !== 'Summary' ? 'hidden' : ''}`}>
                 <ProductsSummary />
+                <div className= "flex justify-end py-2"
+                style={{textAllign: "right", marginRight:"2rem"}} >
+                <strong>Subtotal = Rs. {total}</strong>
+                </div>
+                
                 <div className="flex justify-end p-2">
                     <Button variant="dark" className="flex items-center" onClick={()=>handleTabSwitch('Delivery')}><span className="mr-1">Next</span><ArrowRightSvg /></Button>
                 </div>
@@ -34,7 +48,21 @@ const Cart = () => {
                 <AddressForm onTabSwitch={handleTabSwitch}/>
             </div>
             <div className={`tabs ${currentTab !== 'Payment' ? 'hidden' : ''}`}>
+                <div className= "flex justify-end py-2"
+                style={{textAllign: "right", marginRight:"2rem"}} >
+                Subtotal = Rs. {total}
+                </div>
+                <div className= "flex justify-end py-2"
+                style={{textAllign: "right", marginRight:"2rem"}} >
+                Delivery Fee = Rs. 100
+                </div>
+                <div className= "flex justify-end py-2"
+                style={{textAllign: "right", marginRight:"2rem"}} >
+                <strong>Total = Rs. {total+100}</strong> 
+                </div>
+
                 <StripeWrapper />
+                
             </div>
         </div>
     )

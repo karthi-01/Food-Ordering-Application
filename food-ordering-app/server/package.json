@@ -17,6 +17,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^7.1.0",
     "nodemon": "^2.0.22",
+    "react-select": "^5.7.3",
     "stripe": "^12.5.0"
   },
   "devDependencies": {

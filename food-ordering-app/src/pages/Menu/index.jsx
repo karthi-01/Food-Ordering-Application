@@ -7,6 +7,8 @@ import {
 import ProductDetailCard from "../../components/ProductDetailCard";
 import { Tabs } from "../../components/Tabs";
 import { addToCart } from "../../stores/cart/cartSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Menu = () => {
   const dispatch = useDispatch();
@@ -19,7 +21,13 @@ const Menu = () => {
   }, []);
 
   const onAddProduct = (product) => {
-    dispatch(addToCart(product));
+    const token = sessionStorage.getItem("Auth token");
+    if (token) {
+      dispatch(addToCart(product));;
+    } else {
+      toast.error('Please login to add items to cart');
+    }
+    
   };
 
   const onTabSwitch = (newActiveTab) => {

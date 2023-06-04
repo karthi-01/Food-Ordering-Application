@@ -11,12 +11,13 @@ export const ProductsSummaryCard = ({ product }) => {
     <div className="flex p-1 sm:p-2 border-b border-b-gray-200">
       <div
         className="product-image mr-2 border border-grey-200 rounded-lg w-full"
-        style={{ width: "10rem", height: "10rem" }}
+        style={{ width: "10rem" }}
       >
         <img
           src={product.imageUrl}
           alt={product.name}
-          style={{ objectFit: "cover" }}
+    
+          className="w-40 h-40 object-cover"
         />
       </div>
       <div className="product-info">
@@ -24,7 +25,7 @@ export const ProductsSummaryCard = ({ product }) => {
         {/* <p className="text-gray-600">{product.desciption}</p> */}
       </div>
       <div className="product-price-qt flex flex-col items-center justify-center">
-        <div className="price">{`${product.price}Rs`}</div>
+        <div className="price">{`Rs. ${product.price}`}</div>
         <div className="quantity flex">
           <button
             className="p-1"

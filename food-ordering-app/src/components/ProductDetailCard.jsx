@@ -1,6 +1,8 @@
 import Button from "./elements/Button";
 import React, { useState } from "react";
 import "../App.css";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../stores/cart/cartSlice";
 
 const ReadMore = ({ children }) => {
   const text = children;
@@ -19,6 +21,8 @@ const ReadMore = ({ children }) => {
 };
 
 const ProductDetailCard = ({ product, onAddProduct }) => {
+    const dispatch = useDispatch();
+    const add = (product)=>{dispatch(addToCart(product))}
   return (
     <div className="p-4 m-4 rounded-lg bg-slate-50" style={{ width: "300px" }}>
       <div className="card-container">
@@ -40,7 +44,7 @@ const ProductDetailCard = ({ product, onAddProduct }) => {
         </div>
       </div>
       <div className="w-full flex items-center justify-center">
-        <Button onCick={onAddProduct}>Add to Cart</Button>
+        <Button onClick={()=>onAddProduct(product)}>Add to Cart</Button>
       </div>
     </div>
   );
