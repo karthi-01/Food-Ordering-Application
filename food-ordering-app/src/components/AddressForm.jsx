@@ -42,7 +42,8 @@ export const AddressForm = ({ onTabSwitch }) => {
     <div className="mb-4 md:flex md:justify-between">          
       <div className="mb-4 md:mr-2 md:mb-0 flex-1">
        <label className="block mb-2 text-sm font-bold text-gray-700" for="State">State</label>
-        <select value={selectedState} onChange={handleStateChange}>
+        <select className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border roundedn shadow appearance-none focus:outline-none focus:shadow-outline" value={selectedState} onChange={handleStateChange}>
+
           <option value="">-- Select a state --</option>
           <option value="Gujarat">Gujarat</option>
           <option value="Maharashtra">Maharashtra</option>
@@ -55,7 +56,7 @@ export const AddressForm = ({ onTabSwitch }) => {
       </div>
       <div className="mb-4 md:mr-2 md:mb-0 flex-1">
       <label className="block mb-2 text-sm font-bold text-gray-700" for="city">City</label>
-        <select value={selectedCity} onChange={handleCityChange}>
+        <select className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border roundedn shadow appearance-none focus:outline-none focus:shadow-outline" value={selectedCity} onChange={handleCityChange}>
           <option value="">-- Select a city --</option>
           {selectedState === 'Gujarat' && (
             <>
