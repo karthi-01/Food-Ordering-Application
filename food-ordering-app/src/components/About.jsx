@@ -7,6 +7,7 @@ export const About = () => {
             <div className="p-24 grid grid-cols-2">
                 <div className="">
                     <h2 className="text-2xl font-medium">About Us</h2>
+                    <br></br>
                     <p className="text-lg">
                     Welcome to Delicious, your go-to destination for convenient and delicious online food ordering. We are passionate about connecting hungry customers with a wide range of cuisines, all in one convenient platform.
                     At Delicious, we believe that good food brings people together. Whether you're looking for a quick bite, a hearty meal, or a special treat, our platform offers a diverse selection of cuisines to cater to every taste and craving. From local favorites to popular chains, we've curated a collection of dining options to satisfy your appetite.

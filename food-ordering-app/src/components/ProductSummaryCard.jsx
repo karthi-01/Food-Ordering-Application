@@ -25,7 +25,7 @@ export const ProductsSummaryCard = ({ product }) => {
         {/* <p className="text-gray-600">{product.desciption}</p> */}
       </div>
       <div className="product-price-qt flex flex-col items-center justify-center">
-        <div className="price">{`Rs. ${product.price}`}</div>
+        <div className="price">{`Rs. ${product.price*product.amount}`}</div>
         <div className="quantity flex">
           <button
             className="p-1"
