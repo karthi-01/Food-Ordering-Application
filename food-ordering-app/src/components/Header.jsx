@@ -59,7 +59,7 @@ export const Header = ({ cartCount, active, setActive }) => {
                 </div>
                 <div className="nav-menu-wrapper flex items-center justify-between space-x-10">
                     <Link to="/" className = {`"text-xl" ${path  === '/' ? "active" : ""}`}>Home</Link>
-                    <Link to="#about" onClick={handleScroll} className = {`"text-xl" ${path  === '#about' ? "active" : ""}`}>About</Link>
+                    {/* <Link to="#about" onClick={handleScroll} className = {`"text-xl" ${path  === '#about' ? "active" : ""}`}>About</Link> */}
                 </div>
                 <div className="flex items-center justify-center space-x-4">
                     <Link to="/cart"  className = {`" mr-4 relative" ${path  === '/cart' ? "active" : "white"}`}>
