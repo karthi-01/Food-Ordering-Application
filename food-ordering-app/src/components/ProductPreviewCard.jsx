@@ -16,10 +16,10 @@ export const ProductPreviewCard = ({ product, onAddProduct }) => {
         src={product.imageUrl}
         className="w-40 h-40 object-cover"
         alt={product.name}
+        style={{marginBottom:"1rem"}}
       />
     </div>
-    
-      <h2 className="pb-2 text-lg">{product.name}</h2>
+      <h1 className="pb-2 text-lg">{product.name}</h1>
       <p className="mb-2 h-20 line-clamp-4">{product.desciption}</p>
       <AddProduct onAddProduct={addProduct} />
     </div>

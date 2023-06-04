@@ -23,7 +23,8 @@ const ReadMore = ({ children }) => {
 const ProductDetailCard = ({ product, onAddProduct }) => {
     const dispatch = useDispatch();
     const add = (product)=>{dispatch(addToCart(product))}
-  return (
+
+    return (
     <div className="p-4 m-4 rounded-lg bg-slate-50" style={{ width: "300px" }}>
       <div className="card-container">
         <div className="flex flex-col">

@@ -8,6 +8,7 @@ import { AddressForm } from "../../components/AddressForm";
 import { ProductsSummary } from "../../components/ProductsSummary";
 import { StripeWrapper } from "../../components/PaymentForm";
 import { useEffect, useState } from "react";
+//import productModel from "../../../server/models/productModel";
 
 const Cart = () => {
     const cart = useSelector(cartProducts);
@@ -16,9 +17,8 @@ const Cart = () => {
     const [total,setTotal]= useState(0);
     useEffect(()=>{
         let temptotal = 0;
-        cart.map((item)=>{temptotal+=item.price})
+        cart.map((item)=>{temptotal+=(item.price * item.amount)})
         setTotal(temptotal)
-
     });
 
 
