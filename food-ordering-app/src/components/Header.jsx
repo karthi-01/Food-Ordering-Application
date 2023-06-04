@@ -4,16 +4,20 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Button from "./elements/Button";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart } from "../stores/cart/cartSlice";
 
 export const Header = ({ cartCount, active, setActive }) => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [path, setPath] = useState("");
+  const dispatch = useDispatch();
 
   const handleLogout = () => {
     sessionStorage.removeItem("Auth token");
     sessionStorage.removeItem("User Id");
     window.dispatchEvent(new Event("storage"));
+    dispatch(clearCart());
     navigate("/");
   };
 
@@ -25,21 +29,13 @@ export const Header = ({ cartCount, active, setActive }) => {
   };
 
   useEffect(() => {
-    const checkAuthToken = () => {
-      const token = sessionStorage.getItem("Auth token");
-      if (token) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-      }
-    };
-
-    window.addEventListener("storage", checkAuthToken);
-
-    return () => {
-      window.removeEventListener("storage", checkAuthToken);
-    };
-  }, []);
+    const token = sessionStorage.getItem("Auth token");
+    if (token) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  });
 
   useEffect(() => {
     let location = window.location.pathname;

@@ -4,6 +4,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../stores/cart/cartSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const ProductsPreview = () => {
@@ -38,7 +40,13 @@ export const ProductsPreview = () => {
     }, [])
 
     const onAddProduct = (product) => {
-        dispatch(addToCart(product))
+      const token = sessionStorage.getItem("Auth token");
+      if (token) {
+        dispatch(addToCart(product));;
+      } else {
+        toast.error('Please login to add items to cart');
+      }
+        
     }
     
     return (

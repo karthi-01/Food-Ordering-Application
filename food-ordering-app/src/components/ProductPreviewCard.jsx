@@ -7,7 +7,18 @@ export const ProductPreviewCard = ({ product, onAddProduct }) => {
 
   return (
     <div className="w-full p-4 m-2 rounded text-white bg-gradient-to-b from-slate-600 to-transparent text-center">
-      <img src={product.imageUrl} alt={product.name} />
+    {/* <div style="display: flex; justify-content: center;">
+      <img src={product.imageUrl} className="w-40 h-40 rounded-xl object-cover"
+         alt={product.name} />
+     </div> */}
+     <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <img
+        src={product.imageUrl}
+        className="w-40 h-40 object-cover"
+        alt={product.name}
+      />
+    </div>
+    
       <h2 className="pb-2 text-lg">{product.name}</h2>
       <p className="mb-2 h-20 line-clamp-4">{product.desciption}</p>
       <AddProduct onAddProduct={addProduct} />
