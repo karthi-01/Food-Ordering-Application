@@ -36,6 +36,7 @@ export const AddressForm = ({ onTabSwitch }) => {
                     type="text"
                     placeholder="City"
                     />
+                    {errors.address && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="mb-4 md:mr-2 md:mb-0 flex-1">
                     <label className="block mb-2 text-sm font-bold text-gray-700" for="state">State</label>

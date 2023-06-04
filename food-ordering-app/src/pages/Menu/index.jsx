@@ -45,7 +45,7 @@ const Menu = () => {
                         onTabSwitch={onTabSwitch}
                         />
                 }
-                <div className="flex flex-row mx-3">
+                <div className="flex flex-row mx-3 flex-wrap">
                 {
                     products.products && products.products[activeTabIndex].products.map((product, index) => {
                         return (

@@ -40,7 +40,7 @@ const Login = () => {
                     toast.error('Wrong Password')
                 }
                 if (error.code === 'auth/user-not-found') {
-                    toast.error('Email not found, please register')
+                    toast.error('Email not found, please Sign Up first! ')
                 }
                 setLoading(false);
             })

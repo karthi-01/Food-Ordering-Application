@@ -3,7 +3,7 @@ import Content from "./Content";
 
 const ProductDetailCard = ({ product, onAddProduct }) => {
     return (
-        <div className="p-4 m-4 rounded-lg bg-slate-50">
+        <div className="p-4 m-4 rounded-lg bg-slate-50" style={{width: "300px"}}>
             <div className="flex flex-col items-center justify-between">
                 <h2 className="text-3xl">{product.name}</h2>
                 {/* <ReadMoreLess> */}
