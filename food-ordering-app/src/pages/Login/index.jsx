@@ -47,11 +47,13 @@ const Login = () => {
     
     }
     return (
-        <div className="h-screen bg-black flex  items-center justify-center">
+        <div className="h-screen bg-black flex  items-center justify-center ">
             <div className="rounded-lg max-w-md w-full flex flex-col items-center justify-center relative">
                 <div className="absolute inset-0 transition duration-300 animate-pink blur  gradient bg-gradient-to-tr from-rose-500 to-yellow-500"></div>
                 <div className="p-10 rounded-xl z-10 w-full h-full bg-black">
-                    <h5 className="text-3xl">Login</h5>
+                    <h5 className="block text-3xl font-medium text-gray-200 flex items-center justify-center"> Welcome back! </h5>
+                    <br />
+                    <h5 className="block text-3xl font-medium text-gray-200 flex items-center justify-center">Login</h5>
                 <form className="w-full space-y-6" onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <label 
