@@ -36,7 +36,7 @@ body {
 }
 
 .text {
-  height: 100px;
+  height: 150px;
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -59,3 +59,6 @@ body {
 .product-info {
   width: 400px;
 }
+
+
+
