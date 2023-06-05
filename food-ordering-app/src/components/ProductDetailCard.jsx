@@ -25,7 +25,7 @@ const ProductDetailCard = ({ product, onAddProduct }) => {
     const add = (product)=>{dispatch(addToCart(product))}
 
     return (
-    <div className="p-4 m-4 rounded-lg bg-slate-50" style={{ width: "300px" }}>
+    <div className="p-4 m-4 rounded-lg bg-slate-50" style={{ width: "300px" ,height: "520px"}}>
       <div className="card-container">
         <div className="flex flex-col">
           <h2 className="text-xl card-title" style={{ textAlign: 'center' }}>{product.name}</h2>
@@ -45,10 +45,11 @@ const ProductDetailCard = ({ product, onAddProduct }) => {
             alt={product.name}
           />
         </div>
-      </div>
-      <div className="w-full flex items-center justify-center">
+        <div className="w-full flex items-center justify-center">
         <Button onClick={()=>onAddProduct(product)}>Add to Cart</Button>
       </div>
+      </div>
+      
     </div>
   );
 };
