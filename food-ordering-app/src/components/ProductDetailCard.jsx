@@ -28,9 +28,11 @@ const ProductDetailCard = ({ product, onAddProduct }) => {
     <div className="p-4 m-4 rounded-lg bg-slate-50" style={{ width: "300px" }}>
       <div className="card-container">
         <div className="flex flex-col">
-          <h2 className="text-xl card-title">{product.name}</h2>
-          <p className="text-gray-500 card-desc">
-            <ReadMore>{product.desciption}</ReadMore>
+          <h2 className="text-xl card-title" style={{ textAlign: 'center' }}>{product.name}</h2>
+          <p className="text-gray-500">
+            <ReadMore>
+              {product.desciption}
+              </ReadMore>
           </p>
           <div className="flex items-center justify-center">
             <div className="text-xl text-black">{"Rs: " + product.price}</div>
